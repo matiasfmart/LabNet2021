@@ -8,8 +8,9 @@ namespace ejercicio1_poo.Model
 {
     public abstract class Transporte
     {
-        private int pasajeros;
-        public int Pasajeros
+        private int pasajeros; //variable privada
+        
+        public int Pasajeros    //propiedad publica para acceder a los datos
         {
             get
             {
