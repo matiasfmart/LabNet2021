@@ -1,0 +1,33 @@
+﻿@model List<Ejercicio6.MVC.Project.Models.ProductsView>
+
+@{ 
+    ViewBag.Title = "Products Page";
+}
+
+<h1>Products List</h1>
+
+<button type="button" class="btn btn-light"> @Html.ActionLink("Insert Product", "Insert")</button>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th scope="row">@item.Id.</th>
+            <td>@item.ProductName</td>
+            <td>$ @item.Price</td>
+            <td>@Html.ActionLink("UpDate", "UpDate", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('Are you sure to delete?')" })</td>
+        </tr>
+        }
+    </tbody>
+</table>
