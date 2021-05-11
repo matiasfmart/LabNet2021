@@ -1,0 +1,13 @@
+﻿@model Ejercicio6.MVC.Project.Models.ProductsView
+@{
+    ViewBag.Title = "Products Page";
+}
+<h1>Insert Product</h1>
+
+@using (Html.BeginForm("UpDate", "Products", FormMethod.Post))
+{
+    <label>New Name Product:  </label>@Html.TextBoxFor(p => p.ProductName)
+    <label>New Price $  </label>@Html.TextBoxFor(p => p.Price)
+
+    <input type="submit" class="btn btn-success" value="Update" />
+}
