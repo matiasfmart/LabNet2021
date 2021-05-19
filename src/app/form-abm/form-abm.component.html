@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row g-3">
+    <div class="col-sm">
+      <label class="col-form-label">Product ID</label>
+      <input formControlName='id' type="number" class="form-control" placeholder="ID" aria-label="ID">
+    </div>
+    <div class="col-sm">
+      <label class="col-form-label">Product Name</label>
+      <input formControlName='product' type="text" class="form-control" placeholder="Product" aria-label="Product">
+    </div>
+    <div class="col-sm">
+      <label class="col-form-label">Price</label>
+      <input formControlName='price' type="number" class="form-control" placeholder="$" aria-label="$">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success">Insert</button>
+</form>
